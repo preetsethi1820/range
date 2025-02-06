@@ -1,0 +1,12 @@
+import sys
+from time import perf_counter, ctime
+start_time = perf_counter()
+start_clock = ctime()
+numbers_str = ','.join(map(str, range(1, 100_000_000)))
+sys.stdout.write(numbers_str)
+end_time = perf_counter()
+end_clock = ctime()
+
+print("\nStart Time:", start_clock)
+print("End Time:", end_clock)
+print("Elapsed Time:", end_time - start_time, "seconds")
